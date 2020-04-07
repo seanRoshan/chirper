@@ -1,8 +1,10 @@
 import React, {Component} from 'react';
 import './styles/App.scss';
-import {Col, Container, Row, Spinner} from "react-bootstrap";
+import {Col, Container, Row} from "react-bootstrap";
 import {connect} from "react-redux";
 import {handleInitialData} from "./actions/shared.actions";
+import DashboardComponent from "./views/dashboard/dashboard.component";
+import LoadingComponent from "./components/loading/loading.component.";
 
 class App extends Component {
 
@@ -14,11 +16,8 @@ class App extends Component {
         return (
             <Container fluid>
                 <Row>
-                    <Col className="center">
-                        <h1 className="header-text">Chirper Application!</h1>
-                        <Spinner animation="border" role="status">
-                            <span className="sr-only">Loading...</span>
-                        </Spinner>
+                    <Col>
+                        {this.props.authenticatedUser !== null ? <DashboardComponent/> : <LoadingComponent/>}
                     </Col>
                 </Row>
             </Container>
@@ -26,4 +25,11 @@ class App extends Component {
     }
 }
 
-export default connect()(App);
+
+function mapStateToProps({authenticatedUser}) {
+    return {
+        authenticatedUser
+    }
+}
+
+export default connect(mapStateToProps)(App);
