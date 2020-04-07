@@ -2,37 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="13fadf28-246a-4520-a008-7236cb8762bf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/shahr.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/backend/tweet/data/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/backend/tweet/data/tweets.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/backend/tweet/data/users.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/backend/tweet/tweet.backend.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/tweet/tweet.service.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/App.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/_base.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/_fonts.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/_libraries.sass" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/_variables.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/date.utility.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/actions/authenticatedUser.actions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/actions/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/actions/shared.actions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/actions/tweets.actions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/actions/users.actions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/public/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/logo192.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/logo512.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/robots.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,8 +17,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="Sass File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -72,12 +47,16 @@
     <property name="settings.editor.selected.configurable" value="GitLabConfigurableProvider" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Projects\react\chirper\src" />
+      <recent name="D:\Projects\react\chirper\src\components" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Projects\react\chirper\src" />
       <recent name="D:\Projects\react\chirper" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.npm start">
+  <component name="RunManager" selected="npm.deploy">
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
       <method v="2" />
     </configuration>
@@ -107,6 +86,18 @@
       <item itemvalue="npm.deploy" />
     </list>
   </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
   <component name="SvnConfiguration">
     <configuration>C:\Users\sroshan\AppData\Roaming\Subversion</configuration>
   </component>
@@ -117,12 +108,24 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1586217161050</updated>
-      <workItem from="1586217164572" duration="4393000" />
+      <workItem from="1586217164572" duration="6562000" />
     </task>
+    <task id="LOCAL-00001" summary="feat: Initial commit with basic structure">
+      <created>1586224560339</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1586224560339</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat: Initial commit with basic structure" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Initial commit with basic structure" />
   </component>
   <component name="WindowStateProjectService">
     <state x="736" y="356" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586218294103">
@@ -133,22 +136,26 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1011" y="448" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/3840.0.2560.1400/-3840.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1586220245513" />
-    <state width="2517" height="470" key="GridCell.Tab.0.bottom" timestamp="1586224512502">
+    <state x="903" y="208" key="CommitChangelistDialog2" timestamp="1586224559569">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="470" key="GridCell.Tab.0.bottom/3840.0.2560.1400/-3840.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1586224512502" />
-    <state width="2517" height="470" key="GridCell.Tab.0.center" timestamp="1586224512502">
+    <state x="903" y="208" key="CommitChangelistDialog2/3840.0.2560.1400/-3840.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1586224559569" />
+    <state width="2517" height="380" key="GridCell.Tab.0.bottom" timestamp="1586238878774">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="470" key="GridCell.Tab.0.center/3840.0.2560.1400/-3840.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1586224512502" />
-    <state width="2517" height="470" key="GridCell.Tab.0.left" timestamp="1586224512501">
+    <state width="2517" height="380" key="GridCell.Tab.0.bottom/3840.0.2560.1400/-3840.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1586238878774" />
+    <state width="2517" height="380" key="GridCell.Tab.0.center" timestamp="1586238878774">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="470" key="GridCell.Tab.0.left/3840.0.2560.1400/-3840.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1586224512501" />
-    <state width="2517" height="470" key="GridCell.Tab.0.right" timestamp="1586224512502">
+    <state width="2517" height="380" key="GridCell.Tab.0.center/3840.0.2560.1400/-3840.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1586238878774" />
+    <state width="2517" height="380" key="GridCell.Tab.0.left" timestamp="1586238878774">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="470" key="GridCell.Tab.0.right/3840.0.2560.1400/-3840.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1586224512502" />
+    <state width="2517" height="380" key="GridCell.Tab.0.left/3840.0.2560.1400/-3840.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1586238878774" />
+    <state width="2517" height="380" key="GridCell.Tab.0.right" timestamp="1586238878774">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="380" key="GridCell.Tab.0.right/3840.0.2560.1400/-3840.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1586238878774" />
     <state width="2517" height="470" key="GridCell.Tab.1.bottom" timestamp="1586224512502">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -197,5 +204,9 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="2517" height="470" key="GridCell.Tab.3.right/3840.0.2560.1400/-3840.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1586224512502" />
+    <state x="873" y="430" key="Vcs.Push.Dialog.v2" timestamp="1586224562121">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="873" y="430" key="Vcs.Push.Dialog.v2/3840.0.2560.1400/-3840.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1586224562121" />
   </component>
 </project>
