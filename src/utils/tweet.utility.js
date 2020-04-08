@@ -1,4 +1,4 @@
-export class DateUtility {
+export class TweetUtility {
 
     static formatDate(timestamp) {
         const d = new Date(timestamp);
