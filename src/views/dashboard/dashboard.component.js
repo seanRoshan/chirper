@@ -2,6 +2,8 @@ import React, {Component} from "react";
 import {connect} from "react-redux";
 import {Route} from "react-router-dom";
 import TweetsListComponent from "../../components/tweets/list/tweets.list.component";
+import TweetsComposeComponent from "../../components/tweets/compose/tweets.compose.component";
+import TweetsPageComponent from "../../components/tweets/page/tweetsPage.component";
 
 class DashboardComponent extends Component {
 
@@ -11,10 +13,8 @@ class DashboardComponent extends Component {
                 return (<TweetsListComponent title="YOUR TWEETS" list={this.props.tweetIds}/>)
             }}>
             </Route>
-            <Route exact path='/new' render={() => {
-                return (<h3 className="center">NEW TWEET COMPONENT</h3>)
-            }}>
-            </Route>
+            <Route path="/new" component={TweetsComposeComponent}/>
+            <Route path='/tweet/:id' component={TweetsPageComponent}/>
         </div>)
     }
 }

@@ -54,18 +54,17 @@ export class TweetBackend {
             });
 
             setTimeout(() => {
-                tweets = {
-                    ...tweets,
-                    [formattedTweet.id]: formattedTweet,
-                };
 
-                users = {
-                    ...users,
-                    [author]: {
+                try {
+                    tweets[formattedTweet.id] = formattedTweet;
+
+                    users[author] = {
                         ...users[author],
                         tweets: users[author].tweets.concat([formattedTweet.id])
-                    }
-                };
+                    };
+                } catch (e) {
+                    rej();
+                }
 
                 res(formattedTweet)
             }, 1000)

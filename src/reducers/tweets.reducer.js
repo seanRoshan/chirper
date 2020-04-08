@@ -19,6 +19,26 @@ export default function tweets(state = {}, action) {
                 }
             }
         }
+        case TWEETS_ACTION_TYPES.ADD_TWEET: {
+            const {tweet} = action;
+
+            let replyingTo = {};
+
+            if (tweet.replyingTo) {
+                replyingTo = {
+                    [tweet.replyingTo]: {
+                        ...state[tweet.replyingTo],
+                        replies: state[tweet.replyingTo].replies.concat([tweet.id])
+                    }
+                }
+            }
+
+            return {
+                ...state,
+                [action.tweet.id]: tweet,
+                ...replyingTo
+            }
+        }
         default: {
             return state
         }

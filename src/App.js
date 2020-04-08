@@ -7,7 +7,6 @@ import LoadingComponent from "./components/loading/loading.component";
 import FooterComponent from "./components/footer/footer.component";
 import NavbarComponent from "./components/navbar/navbar.component";
 import {HashRouter} from "react-router-dom";
-import {LoadingBar} from "react-redux-loading";
 
 class App extends Component {
 

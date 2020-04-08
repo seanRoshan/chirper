@@ -1,6 +1,8 @@
 import React from 'react';
 import TweetsDetailComponent from "../detail/tweets.detail.component";
 
+import PropTypes from 'prop-types';
+
 function TweetsListComponent(props) {
 
     const {title, list} = props;
@@ -15,5 +17,11 @@ function TweetsListComponent(props) {
         </React.Fragment>
     );
 }
+
+TweetsListComponent.propTypes = {
+    title: PropTypes.string.isRequired,
+    list: PropTypes.array.isRequired
+};
+
 
 export default TweetsListComponent;

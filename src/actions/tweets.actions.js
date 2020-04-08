@@ -1,8 +1,10 @@
 import {TweetService} from "../services";
+import {hideLoading, showLoading} from "react-redux-loading";
 
 export const TWEETS_ACTION_TYPES = {
     RECEIVE_TWEETS: 'RECEIVE_TWEETS',
-    TOGGLE_TWEET: 'TOGGLE_TWEET'
+    TOGGLE_TWEET: 'TOGGLE_TWEET',
+    ADD_TWEET: 'ADD_TWEET'
 };
 
 export function receiveTweets(tweets) {
@@ -32,4 +34,27 @@ export function handleToggleTweet(tweet) {
                 alert("There was an error linking the tweet. Try again!")
             });
     }
+}
+
+export function addTweet(tweet) {
+    return {
+        type: TWEETS_ACTION_TYPES.ADD_TWEET,
+        tweet
+    }
+}
+
+export function handleAddTweet(text, replyingTo) {
+    return ((dispatch, getState) => {
+        const {authenticatedUser} = getState();
+
+        dispatch(showLoading());
+
+        return TweetService.saveTweet({
+            text,
+            author: authenticatedUser,
+            replyingTo
+        })
+            .then((tweet) => dispatch(addTweet(tweet)))
+            .then(() => dispatch(hideLoading()))
+    });
 }
