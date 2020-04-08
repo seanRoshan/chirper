@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "db25a2d1aab533d07f2b53b341625020",
+    "revision": "57c700b2e8f92e4dd672d3d4c86ca1e3",
     "url": "/chirper/index.html"
   },
   {
-    "revision": "7a5080cb8a007687dae1",
-    "url": "/chirper/static/css/main.2a008aa1.chunk.css"
+    "revision": "fe88005183bb00e23f4a",
+    "url": "/chirper/static/css/main.db19d2c9.chunk.css"
   },
   {
     "revision": "9d8bd4bece472d355ad0",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/chirper/static/js/2.386658c6.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "7a5080cb8a007687dae1",
-    "url": "/chirper/static/js/main.519e4ca8.chunk.js"
+    "revision": "fe88005183bb00e23f4a",
+    "url": "/chirper/static/js/main.3b1f2ee7.chunk.js"
   },
   {
     "revision": "0ebe7adf639610d52afc",
