@@ -8,9 +8,10 @@ import TweetsPageComponent from "../../components/tweets/page/tweetsPage.compone
 class DashboardComponent extends Component {
 
     render() {
+        const {tweetIds} = this.props;
         return (<div className="dashboard-view">
             <Route exact path='/' render={() => {
-                return (<TweetsListComponent title="YOUR TWEETS" list={this.props.tweetIds}/>)
+                return (<TweetsListComponent title="Your Tweets" list={tweetIds}/>)
             }}>
             </Route>
             <Route path="/new" component={TweetsComposeComponent}/>
@@ -21,7 +22,9 @@ class DashboardComponent extends Component {
 
 
 function mapStateToProps({tweets}) {
-    return {tweetIds: Object.keys(tweets).sort((a, b) => tweets[b].timestamp - tweets[a].timestamp)};
+    return {
+        tweetIds: Object.keys(tweets).sort((a, b) => tweets[b].timestamp - tweets[a].timestamp),
+    };
 }
 
 export default connect(mapStateToProps)(DashboardComponent);

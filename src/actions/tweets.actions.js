@@ -1,5 +1,5 @@
 import {TweetService} from "../services";
-import {hideLoading, showLoading} from "react-redux-loading";
+import {hideLoading, showLoading} from "react-redux-loading-bar";
 
 export const TWEETS_ACTION_TYPES = {
     RECEIVE_TWEETS: 'RECEIVE_TWEETS',

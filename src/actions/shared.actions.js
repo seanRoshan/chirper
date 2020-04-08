@@ -2,7 +2,7 @@ import {TweetService} from "../services";
 import {receiveUsers} from "./users.actions";
 import {receiveTweets} from "./tweets.actions";
 import {setAuthenticatedUser} from "./authenticatedUser.actions";
-import {hideLoading, showLoading} from "react-redux-loading";
+import {hideLoading, showLoading} from "react-redux-loading-bar";
 
 const AUTHENTICATED_USER_ID = 'sarah_edo';
 

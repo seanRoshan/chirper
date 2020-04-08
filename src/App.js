@@ -7,6 +7,7 @@ import LoadingComponent from "./components/loading/loading.component";
 import FooterComponent from "./components/footer/footer.component";
 import NavbarComponent from "./components/navbar/navbar.component";
 import {HashRouter} from "react-router-dom";
+import LoadingBar from "react-redux-loading-bar";
 
 class App extends Component {
 
@@ -20,10 +21,14 @@ class App extends Component {
         return (
             <div>
                 <HashRouter basename="/">
-                    <div className="header"><NavbarComponent/></div>
+                    <div className="header">
+                        <LoadingBar/>
+                        <NavbarComponent isLoading={loadingBar.default}/>
+                    </div>
                     <div className="content">
-                        {loadingBar.default ? <LoadingComponent/> : authenticatedUser !== null ? <DashboardComponent/> :
-                            <h3>Access Denied!</h3>}
+                        {authenticatedUser !== null
+                            ? <DashboardComponent/>
+                            : loadingBar.default ? <LoadingComponent/> : <h3>Access Denied!</h3>}
                     </div>
                     <div className="footer"><FooterComponent/></div>
                 </HashRouter>

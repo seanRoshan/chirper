@@ -1,17 +1,19 @@
 import React, {Component} from 'react';
 import {connect} from "react-redux";
 import {handleAddTweet} from "../../../actions/tweets.actions";
+import {Redirect} from "react-router-dom";
 
 class TweetsComposeComponent extends Component {
 
     state = {
         text: '',
+        toHome: false
     };
 
     handleChange = (e) => {
         const text = e.target.value;
         this.setState(() => ({
-            text
+            text,
         }))
     };
 
@@ -22,26 +24,27 @@ class TweetsComposeComponent extends Component {
 
         const {dispatch, id} = this.props;
 
-        console.log('New Tweet: ', text);
-
         dispatch(handleAddTweet(text, id));
 
         this.setState(() => ({
-            text: ''
+            text: '',
+            toHome: !id
         }))
     };
 
 
     render() {
-        const {text} = this.state;
+        const {text, toHome} = this.state;
 
-        /* todo: Redirect to / if submitted */
+        if (toHome) {
+            return <Redirect to="/"/>
+        }
 
         const tweetLeft = 280 - text.length;
 
         return (
             <React.Fragment>
-                <h3 className='center'>Compose new Tweet</h3>
+                <h3 className='center'>Compose New Tweet</h3>
                 <form className='new-tweet' onSubmit={this.handleSubmit}>
             <textarea
                 placeholder="What's happening?"

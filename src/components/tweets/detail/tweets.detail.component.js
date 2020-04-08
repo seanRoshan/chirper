@@ -5,6 +5,7 @@ import {TiArrowBackOutline} from 'react-icons/ti/index'
 import {TiHeartOutline} from 'react-icons/ti/index'
 import {TiHeartFullOutline} from 'react-icons/ti/index'
 import {handleToggleTweet} from "../../../actions/tweets.actions";
+import {withRouter} from "react-router-dom";
 
 
 class TweetsDetailComponent extends Component {
@@ -20,14 +21,18 @@ class TweetsDetailComponent extends Component {
     };
 
     toParent = (e, id) => {
-        e.preventDefault()
-        // todo: Redirect to parent Tweet.
+        e.preventDefault();
+        this.props.history.push(`/tweet/${id}`);
+    };
+
+    navigateToTweetPage = (id) => {
+        this.props.history.push(`/tweet/${id}`);
     };
 
     render() {
 
         const {tweet} = this.props;
-        const {name, avatar, timestamp, text, hasLiked, likes, replies, parent} = tweet;
+        const {name, avatar, timestamp, text, hasLiked, likes, replies, id, parent} = tweet;
 
         return (
             <div className='tweet'>
@@ -48,7 +53,9 @@ class TweetsDetailComponent extends Component {
                         <p>{text}</p>
                     </div>
                     <div className='tweet-icons'>
-                        <TiArrowBackOutline className='tweet-icon'/>
+                        <TiArrowBackOutline className='tweet-icon' onClick={() => {
+                            this.navigateToTweetPage(id)
+                        }}/>
                         <span>{replies !== 0 && replies}</span>
                         <button className='heart-button' onClick={this.handleLike}>
                             {hasLiked === true
@@ -78,4 +85,4 @@ function mapStateToProps({authenticatedUser, users, tweets}, {id}) {
     };
 }
 
-export default connect(mapStateToProps)(TweetsDetailComponent);
+export default withRouter(connect(mapStateToProps)(TweetsDetailComponent));
