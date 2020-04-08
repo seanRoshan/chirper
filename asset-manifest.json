@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/chirper/static/css/main.2a008aa1.chunk.css",
-    "main.js": "/chirper/static/js/main.0700dd9c.chunk.js",
-    "main.js.map": "/chirper/static/js/main.0700dd9c.chunk.js.map",
+    "main.js": "/chirper/static/js/main.519e4ca8.chunk.js",
+    "main.js.map": "/chirper/static/js/main.519e4ca8.chunk.js.map",
     "runtime-main.js": "/chirper/static/js/runtime-main.bdc866e8.js",
     "runtime-main.js.map": "/chirper/static/js/runtime-main.bdc866e8.js.map",
     "static/js/2.386658c6.chunk.js": "/chirper/static/js/2.386658c6.chunk.js",
     "static/js/2.386658c6.chunk.js.map": "/chirper/static/js/2.386658c6.chunk.js.map",
     "index.html": "/chirper/index.html",
-    "precache-manifest.7866c409c4ddbc185618155e2ab282c1.js": "/chirper/precache-manifest.7866c409c4ddbc185618155e2ab282c1.js",
+    "precache-manifest.cc235de3fd682c3ec82e2c607d9f57bd.js": "/chirper/precache-manifest.cc235de3fd682c3ec82e2c607d9f57bd.js",
     "service-worker.js": "/chirper/service-worker.js",
     "static/css/main.2a008aa1.chunk.css.map": "/chirper/static/css/main.2a008aa1.chunk.css.map",
     "static/js/2.386658c6.chunk.js.LICENSE.txt": "/chirper/static/js/2.386658c6.chunk.js.LICENSE.txt",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.bdc866e8.js",
     "static/js/2.386658c6.chunk.js",
     "static/css/main.2a008aa1.chunk.css",
-    "static/js/main.0700dd9c.chunk.js"
+    "static/js/main.519e4ca8.chunk.js"
   ]
 }
