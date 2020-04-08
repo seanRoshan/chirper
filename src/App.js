@@ -1,10 +1,12 @@
 import React, {Component} from 'react';
-import './styles/App.scss';
-import {Col, Container, Row} from "react-bootstrap";
+import './styles/Application.scss';
 import {connect} from "react-redux";
 import {handleInitialData} from "./actions/shared.actions";
 import DashboardComponent from "./views/dashboard/dashboard.component";
-import LoadingComponent from "./components/loading/loading.component.";
+import LoadingComponent from "./components/loading/loading.component";
+import FooterComponent from "./components/footer/footer.component";
+import NavbarComponent from "./components/navbar/navbar.component";
+import {HashRouter} from "react-router-dom";
 
 class App extends Component {
 
@@ -14,13 +16,15 @@ class App extends Component {
 
     render() {
         return (
-            <Container fluid>
-                <Row>
-                    <Col>
+            <div>
+                <HashRouter basename="/">
+                    <div className="header"><NavbarComponent/></div>
+                    <div className="content">
                         {this.props.authenticatedUser !== null ? <DashboardComponent/> : <LoadingComponent/>}
-                    </Col>
-                </Row>
-            </Container>
+                    </div>
+                    <div className="footer"><FooterComponent/></div>
+                </HashRouter>
+            </div>
         )
     }
 }
