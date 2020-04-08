@@ -1,17 +1,23 @@
 import React, {Component} from 'react';
 import {connect} from "react-redux";
 import {TweetUtility} from "../../../utils";
-import { TiArrowBackOutline } from 'react-icons/ti/index'
-import { TiHeartOutline } from 'react-icons/ti/index'
-import { TiHeartFullOutline } from 'react-icons/ti/index'
+import {TiArrowBackOutline} from 'react-icons/ti/index'
+import {TiHeartOutline} from 'react-icons/ti/index'
+import {TiHeartFullOutline} from 'react-icons/ti/index'
+import {handleToggleTweet} from "../../../actions/tweets.actions";
 
 
 class TweetsDetailComponent extends Component {
 
 
     handleLike = (e) => {
-        e.preventDefault()
-        // todo: Handle Like Tweet
+        e.preventDefault();
+        const {dispatch, tweet, authenticatedUser} = this.props;
+        dispatch(handleToggleTweet({
+            id: tweet.id,
+            hasLiked: tweet.hasLiked,
+            authenticatedUser
+        }));
     };
 
     toParent = (e, id) => {

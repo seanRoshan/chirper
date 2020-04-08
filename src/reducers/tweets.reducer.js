@@ -8,6 +8,17 @@ export default function tweets(state = {}, action) {
                 ...action.tweets
             }
         }
+        case TWEETS_ACTION_TYPES.TOGGLE_TWEET: {
+            return {
+                ...state,
+                [action.id]: {
+                    ...state[action.id],
+                    likes: action.hasLiked === true
+                        ? state[action.id].likes.filter((uid) => uid !== action.authenticatedUser)
+                        : state[action.id].likes.concat(action.authenticatedUser)
+                }
+            }
+        }
         default: {
             return state
         }

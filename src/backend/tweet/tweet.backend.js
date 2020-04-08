@@ -18,18 +18,16 @@ export class TweetBackend {
         })
     }
 
-    static saveLikeToggle({id, hasLiked, authedUser}) {
+    static saveLikeToggle({id, hasLiked, authenticatedUser}) {
         return new Promise((res, rej) => {
             setTimeout(() => {
-                tweets = {
-                    ...tweets,
-                    [id]: {
-                        ...tweets[id],
-                        likes: hasLiked === true
-                            ? tweets[id].likes.filter((uid) => uid !== authedUser)
-                            : tweets[id].likes.concat([authedUser])
-                    }
-                };
+                if (tweets && tweets.hasOwnProperty(id) && tweets[id].hasOwnProperty("likes")) {
+                    tweets[id].likes = hasLiked === true
+                        ? tweets[id].likes.filter((uid) => uid !== authenticatedUser)
+                        : tweets[id].likes.concat([authenticatedUser]);
+                } else {
+                    rej()
+                }
                 res()
             }, 500)
         })

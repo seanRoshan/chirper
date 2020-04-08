@@ -11,7 +11,7 @@ export class TweetService {
         }))
     }
 
-    static _saveLikeToggle(info) {
+    static saveLikeToggle(info) {
         return TweetBackend.saveLikeToggle(info)
     }
 
