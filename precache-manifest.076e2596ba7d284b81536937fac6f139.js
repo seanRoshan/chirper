@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ab2a1c724b2c8aa7260cb3c00dd0e90d",
+    "revision": "dd775fb1bd1a0ada64842fa8f5a21561",
     "url": "/chirper/index.html"
   },
   {
